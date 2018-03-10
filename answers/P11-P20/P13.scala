@@ -1,17 +1,9 @@
 object P13 {
-  def encodeDirect(list: List[Any]) List[(Int, Any)] = list match {
-    case Nil => Nil
-    case
-  }
-
-  def encode(list: List[Any]): List[(Int, Any)] = pack(list).map(x => (x.length, x.head))
-
-  def pack(list: List[Any]): List[List[Any]] = {
-    if (list.isEmpty) List(List())
+  def encodeDirect[T](list: List[T]): List[(Int, T)] = {
+    if (list.isEmpty) List()
     else {
-      val (packed, next) = list.span{ _ == list.head }
-      if (next.isEmpty) List(packed)
-      else packed :: pack(next)
+      val (packed, next) = list.span(_ == list.head)
+      (packed.length, packed.head) :: encodeDirect(next)
     }
   }
 }
