@@ -1,4 +1,9 @@
-object P10 {
+object P13 {
+  def encodeDirect(list: List[Any]) List[(Int, Any)] = list match {
+    case Nil => Nil
+    case
+  }
+
   def encode(list: List[Any]): List[(Int, Any)] = pack(list).map(x => (x.length, x.head))
 
   def pack(list: List[Any]): List[List[Any]] = {
