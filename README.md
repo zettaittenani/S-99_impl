@@ -1,5 +1,5 @@
 # S-99_impl
-[Ninety-Nine Scala Problems](http://aperiodic.net/phil/scala/s-99/) implementation
+[Ninety-Nine Scala Problems](http://aperiodic.net/phil/scala/s-99/)' implementation
 
 ## Refs
 - [Scala研修テキスト](https://dwango.github.io/scala_text/)
